@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <title>Crystal Collector Game</title>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--CSS Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Crystal Collector jumbotron -->
+    <div class="jumbotron1 jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Crystal Collector Game</h1>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!--Game Instructions-->
+        <div class="rowinst">
+            <div class="col-md-6">
+                <strong>
+                    <p>You will be given a random number at the start of the game.</p>
+                    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points
+                        to
+                        your total score.</p>
+                    <p>You win the game by matching your total score with the random number. You lose the game if your
+                        total scoregoes above the random number.</p>
+                    <p>The value of each crystal is hidden from you until you click on it.</p>
+                    <p>Each time when the game starts, the game will change the value of each crystal.</p>
+                </strong>
+            </div>
+        </div>
+        <div id="display">
+
+            <!--The random number will be generated here-->
+            <div class="card1 text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-header"></div>
+                <div class="card-body">
+                    <div id="comp"></div>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+
+            <!--The wins/losses counter will go here-->
+            <div class="card2 text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">
+
+                    <div id="wins"></div>
+
+                    <div id="losses"></div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+
+        <!--The crystal buttons will go below-->
+
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+                <div id="crystals">
+
+                </div>
+            </div>
+            <!--Total score banner-->
+            <div class="card3 text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                    <p class="card-text"><b>Your total score is...</b></p>
+
+                </div>
+            </div>
+
+
+            <!--Total score counter-->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card4 text-white bg-success mb-3" style="max-width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text" id="score"></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./assets/javascript/game.js"></script>
+    </div>
+</body>
+
+</html>
